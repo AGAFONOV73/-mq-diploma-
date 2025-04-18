@@ -1,34 +1,35 @@
 @font-face {
   font-family: "OpenSans";
-  src: url("C:/Users/Sasha/Desktop/MQ-diploma/fonts/OpenSans-Regular.woff2");
-  src: url("C:/Users/Sasha/Desktop/MQ-diploma/fonts/OpenSans-Regular.woff");
-  src: url("C:/Users/Sasha/Desktop/MQ-diploma/fonts/OpenSans-Regular.ttf");
-  font-weight: normal;
+  src: url("./fonts/OpenSans-Regular.woff2") format("woff2");
+  src: url("./fonts/OpenSans-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "OpenSans";
-  src: url("C:/Users/Sasha/Desktop/MQ-diploma/fonts/OpenSans-Bold.woff2");
-  src: url("C:/Users/Sasha/Desktop/MQ-diploma/fonts/OpenSans-Bold.woff");
-  src: url("C:/Users/Sasha/Desktop/MQ-diploma/fonts/OpenSans-Bold.ttf");
+  src: url("./fonts/OpenSans-Bold.woff2") format("woff2");
+  src: url("./fonts/OpenSans-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
   }
-
+  /*@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');*/
 body {
   margin: 0;
   padding: 0;
   appearance: none;
 }
+/* {
+  outline: 2px solid red;
+}*/
 
 
 
 .header {
   display: flex;
   margin: auto;
-  max-width: 1660px;
+  
   background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -56,6 +57,7 @@ body {
 .header-wrapper {
   width: 1200px;
   margin: auto ;
+  padding: 0 15px;
 }
 .header-navigation {
   width: 100%;
@@ -77,7 +79,7 @@ body {
 
 .header-menu-list {
   display: flex;
-  margin-right: -600px;
+  
   padding: 0;
   list-style-type: none;
 }
@@ -90,7 +92,7 @@ body {
 .header-title {
   margin: auto;
   max-width: 690px;
-  font-size: 3.4vw;
+  font-size: 36px;
   text-align: center;
   text-transform: uppercase;
   margin-top: 90px;
@@ -104,12 +106,15 @@ body {
   text-decoration: underline;
   color: #e0e0df;
 }
+.burger {
+  display: none;
+}
 
 input[type=checkbox] {
   display: none;
 }
 .trends {
-  max-width: 1660px;
+  /*max-width: 1660px;*/
   display: flex;
   margin: auto;
 }
@@ -142,7 +147,7 @@ input[type=checkbox] {
    
     width: 500px;
     height: 90px;
-    font-size: 4.1vw;
+    font-size: 30px;
     text-align: center;
     text-transform: uppercase;
     line-height: 1.5;
@@ -158,33 +163,37 @@ input[type=checkbox] {
     row-gap: 30px;
   }
   .burger {
-   /* visibility: visible;*/
-    /*margin-right: 20px;*/
+    display: flex;
+  
     position: absolute;
     top: 20px;
     right: 35px;
-    width: 17px;
+    width: 18px;
     height: 2px;
     background-color: #ffffff;
     border-radius: 10px;
     
   }
   .burger::before {
-    top: -5px;
+    display: flex;
+    top: -6px;
+    left: 0;
     content: "";
     display: block;
     position: absolute;
-    width: 17px;
+    width: 13px;
     height: 2px;
     border-radius: 10px;
     background-color: #ffffff;
   }
   .burger::after {
-    top: 5px;
+    display: flex;
+    top: 6px;
+    left: 0;
     content: "";
     display: block;
     position: absolute;
-    width: 17px;
+    width: 13px;
     height: 2px;
     border-radius: 10px;
     background-color: #ffffff;
@@ -202,7 +211,7 @@ input[type=checkbox] {
   height: 3px;
   margin-top: 40px;
   margin-left: -150px;
-  position: absolute;
+  
 }
 }
 @media (min-width: 641px) /*and (max-width: 1199px)*/  { 
@@ -232,7 +241,7 @@ input[type=checkbox] {
   
   .trend-card {
     width: 100%;
-    min-width: 320px;
+    min-height: 310px;
     display: flex;
     align-items: end;
   }
@@ -240,21 +249,25 @@ input[type=checkbox] {
   .trend__box-interior {
     background-image: url("../images/trend1.jpg");
     background-repeat: no-repeat;
+    background-size: cover;
     grid-row: span 2;
   }
   .trend__box-food {
     background-image: url("../images/trend2.jpg");
     background-repeat: no-repeat;
+    background-size: cover;
     grid-row: span 2;
   }
   .trend__box-travel {
     background-image: url("../images/trend3.jpg");
     background-repeat: no-repeat;
+    background-size: cover;
     grid-row: span 2;
   }
   .trend__box-health {
     background-image: url("../images/trend4.jpg");
     background-repeat: no-repeat;
+    background-size: cover;
     grid-row: span 2;
   }
   .nav-trend {
@@ -387,8 +400,7 @@ input[type=checkbox] {
       row-gap: 30px;
     }
     .burger {
-     /* visibility: visible;*/
-     /* margin-right: 20px;*/
+      display: flex;
       position: absolute;
       top: 20px;
       right: 35px;
@@ -399,21 +411,25 @@ input[type=checkbox] {
       
     }
     .burger::before {
-      top: -5px;
+      display: flex;
+      top: -6px;
+      left: 0;
       content: "";
       display: block;
       position: absolute;
-      width: 17px;
+      width: 13px;
       height: 2px;
       border-radius: 10px;
       background-color: #ffffff;
     }
     .burger::after {
-      top: 5px;
+      display: flex;
+      top: 6px;
+      left: 0;
       content: "";
       display: block;
       position: absolute;
-      width: 17px;
+      width: 13px;
       height: 2px;
       border-radius: 10px;
       background-color: #ffffff;
@@ -464,6 +480,7 @@ input[type=checkbox] {
   }
    .main__container {
     display: flex;
+    justify-content: space-between;
     box-sizing: border-box;
     position: relative;
     max-width: 1170px;
@@ -541,7 +558,7 @@ input[type=checkbox] {
    word-spacing: 1px;
    line-height: 1.4;
    margin-top: 44px;
-   overflow: scroll;
+   
  }
  .category-box {
    list-style-type: none;
@@ -557,7 +574,7 @@ input[type=checkbox] {
  .post__item {
    display: flex;
    flex-direction: column;
-   height: 100px;
+   
    gap: 22px;
  }
  .post {
@@ -571,6 +588,9 @@ input[type=checkbox] {
  }
  .aside__new__post {
    width: 270px;
+ }
+ .logo__post {
+  object-fit: contain;
  }
  .new__post-title {
    font-weight: 700;
@@ -600,9 +620,15 @@ input[type=checkbox] {
    color: #878787;
  }
  .new__post-name {
-   font-size: 14px;
+   margin: 0;
+   font-size: 11px;
    text-transform: uppercase;
-   margin-bottom: 45px;
+   
+ }
+ .new__post-name-link {
+  text-decoration: none;
+  font-weight: 700;
+  color: #000000;
  }
  
  .search__form {
@@ -668,10 +694,10 @@ input[type=checkbox] {
  .newsletter__title::after {
    content: "";
    background-color: #e1d9bd;
-   width: 65px;
+   width: 80px;
    height: 3px;
  
-   left: 105px;
+   left: 0px;
    position: absolute;
    margin-top: 30px;
  }
@@ -680,13 +706,15 @@ input[type=checkbox] {
    height: 50px;
    font-size: 13px;
  
-   background-color: #f4f7f6;
+   /*background-color: #f4f7f6;*/
    margin: 50px auto 15px;
    outline: none;
  }
  .email {
-   width: 100%;
-   margin: auto;
+   min-width: 270px;
+   padding: 0;
+   margin-top: 40px;
+   margin-bottom: 40px;
    height: 52px;
    font-size: 13px;
    padding-left: 13px;
@@ -701,7 +729,7 @@ input[type=checkbox] {
    color: #ffffff;
    text-transform: uppercase;
    background-color: #b59f5b;
-   margin-top: 60px;
+   
    border: none;
  }
  
@@ -719,7 +747,7 @@ input[type=checkbox] {
    font-size: 14px;
    position: relative;
    margin-bottom: 40px;
-   margin-top: 120px;
+   margin-top: 200px;
  }
  .sidebar__tags-title::after {
    content: "";
